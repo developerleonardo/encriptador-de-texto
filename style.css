@@ -1,0 +1,16 @@
+:root {
+    --white: #ffffff;
+    --light-blue-300: #E9ECF8;
+    --dark-blue-300: #0A3871;
+    --gray-400: #495057;
+}
+
+body {
+    background-color: var(--light-blue-300);
+}
+
+.container {
+    width: 100px;
+    height: 100px;
+    background-color: var(--dark-blue-300);
+}
