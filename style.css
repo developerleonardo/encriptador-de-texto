@@ -3,14 +3,115 @@
     --light-blue-300: #E9ECF8;
     --dark-blue-300: #0A3871;
     --gray-400: #495057;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
 }
 
 body {
     background-color: var(--light-blue-300);
+    font-family: "Quicksand", sans-serif;
+    margin: 0;
 }
 
 .container {
-    width: 100px;
-    height: 100px;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    width: 10%;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon img {
+    width: 100%;
+}
+
+.encryptor {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 90%;
+}
+
+.input-container {
+    padding: 10px;
+    height: 80%;
+}
+
+.input-container input {
+    width: 90%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    padding: 30px;
+    font-size: large;
+}
+
+.input-container input::placeholder {
+    font-size: large;
+}
+
+.buttoms-container {
+    display: flex;
+    flex-direction: column;
+    height: 20%;
+}
+
+.alert-message-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.alert-message-container img {
+    width: 24px;
+    height: 24px;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.buttons button {
+    width: 380px;
+    height: 60px;
+    border-radius: 20px;
     background-color: var(--dark-blue-300);
+    font-size: medium;
+    font-weight: bold;
+    color: var(--white);
+    border: 1px solid var(--dark-blue-300);
+}
+
+.buttons button:nth-child(2) {
+    background-color: #CED4DA;
+    color: var(--dark-blue-300);
+}
+
+.resultado-container {
+    background-color: var(--white);
+    height: 90%;
+    width: 20%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+}
+
+.resultado-container h2 {
+    font-weight: bolder;
 }
