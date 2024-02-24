@@ -24,21 +24,22 @@ body {
 
 .icon {
     width: 10%;
-    height: 48px;
+    height: 90%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    padding-top: 60px;
 }
 
 .icon img {
     width: 100%;
+    height: 48px;
 }
 
 .encryptor {
     display: flex;
     flex-direction: column;
     width: 60%;
-    height: 90%;
+    height: 70%;
 }
 
 .input-container {
@@ -46,30 +47,37 @@ body {
     height: 80%;
 }
 
-.input-container input {
+.input-container label {
+    font-size: xx-large;
+    font-weight: bold;
+    color: var(--dark-blue-300);
+}
+
+.input-container textarea {
     width: 90%;
     height: 100%;
     background-color: transparent;
     border: none;
     padding: 30px;
     font-size: large;
-}
-
-.input-container input::placeholder {
-    font-size: large;
+    resize: none;
+    border: none;
 }
 
 .buttoms-container {
     display: flex;
     flex-direction: column;
     height: 20%;
+    max-width: 900px;
+    justify-content: center;
+    align-items: center;
 }
 
 .alert-message-container {
     display: flex;
     gap: 10px;
     align-items: center;
-    justify-content: center;
+    width: 680px;
 }
 
 .alert-message-container img {
@@ -83,20 +91,26 @@ body {
     justify-content: center;
 }
 
-.buttons button {
-    width: 380px;
+.active-button {
+    width: 320px;
     height: 60px;
     border-radius: 20px;
-    background-color: var(--dark-blue-300);
     font-size: medium;
     font-weight: bold;
-    color: var(--white);
     border: 1px solid var(--dark-blue-300);
+    background-color: var(--dark-blue-300);
+    color: var(--white);
 }
 
-.buttons button:nth-child(2) {
-    background-color: #CED4DA;
+.inactive-button {
+    width: 320px;
+    height: 60px;
+    border-radius: 20px;
+    background-color: transparent;
+    font-size: medium;
+    font-weight: bold;
     color: var(--dark-blue-300);
+    border: 1px solid var(--dark-blue-300);
 }
 
 .resultado-container {
@@ -114,4 +128,23 @@ body {
 
 .resultado-container h2 {
     font-weight: bolder;
+}
+
+.texto-encriptado-container {
+    background-color: var(--white);
+    height: 90%;
+    width: 20%;
+    border-radius: 20px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+}
+
+.texto-encriptado {
+    width: 100%;
+    max-height: 600px;
+    overflow-y: scroll;
 }
