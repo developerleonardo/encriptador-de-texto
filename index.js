@@ -4,6 +4,9 @@ const desencryptButton = document.getElementById("desencrypt-button");
 const divToHide = document.querySelector(".resultado-container");
 const encryptedMessageContainer = document.querySelector(".texto-encriptado-container");
 const encryptedText = document.getElementById("encrypted-text");
+const alertMessage = document.getElementById("alert-message");
+const copyText = document.getElementById("copy-text")
+const copyButton = document.getElementById("copy-button");
 
 const cerrar = (divToHide) => {
     divToHide.style.display = "none";
@@ -42,14 +45,45 @@ const desencryptMessage = (messageToDencrypt) => {
     });
     const desencryptedMessage = encryptMessage.join("");
     encryptedText.innerHTML = desencryptedMessage;
+};
+
+const validateInputToEncrypt = (messageToEncrypt) => {
+    const inputMessage = messageToEncrypt.value;
+    const regex = /^[a-z\s]+$/;
+    if(regex.test(inputMessage)) {
+        encryptMessage(messageToEncrypt);
+        alertMessage.classList.remove("red-alert");
+    } else {
+        alertMessage.classList.add("red-alert");
+    }
+};
+
+const validateInputToDesencrypt = (messageToEncrypt) => {
+    const inputMessage = messageToEncrypt.value;
+    const regex = /^[a-z\s]+$/;
+    if(regex.test(inputMessage)) {
+        desencryptMessage(messageToEncrypt);
+        alertMessage.classList.remove("red-alert");
+    } else {
+        alertMessage.classList.add("red-alert");
+    }
+};
+
+copyResult = () => {
+    encryptedText.select();
+    document.execCommand("copy");
 }
 
 encryptButton.addEventListener("click", () => {
     cerrar(divToHide);
-    encryptMessage(messageToEncrypt);
-})
+    validateInputToEncrypt(messageToEncrypt);
+});
 
 desencryptButton.addEventListener("click", () => {
     cerrar(divToHide);
-    desencryptMessage(messageToEncrypt);
+    validateInputToDesencrypt(messageToEncrypt);
+});
+
+copyButton.addEventListener("click", () => {
+    copyResult();
 })

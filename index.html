@@ -24,7 +24,7 @@
                 <div class="buttoms-container">
                     <div class="alert-message-container">
                         <img src="./icons/error_circle_warning_exclamation_alert_icon_175530.svg" alt="icono de alerta">
-                        <p>Solo letras minúsculas y sin acentos</p>
+                        <p id="alert-message">Solo letras minúsculas y sin acentos</p>
                     </div>
                     <div class="buttons">
                         <button id="encrypt-button" class="active-button">Encriptar</button>
@@ -36,11 +36,11 @@
         <div class="resultado-container">
             <img src="./img/Muñeco.png" alt="imagen de una persona con una lupa en la mano, observando un diamante">
             <h2>Ningun mensaje fue encontrado</h2>
-            <p>Ingresa el texto que deseas encriptar o desencriptar</p>
+            <p id="copy-text">Ingresa el texto que deseas encriptar o desencriptar</p>
         </div>
         <div class="texto-encriptado-container">
-            <p id="encrypted-text" class="texto-encriptado"></p>
-            <button class="inactive-button">Copy</button>
+            <textarea id="encrypted-text" class="texto-encriptado"></textarea>
+            <button id="copy-button" class="inactive-button">Copy</button>
         </div>
     </div>
     <script src="index.js"></script>
