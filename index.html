@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
@@ -20,8 +21,9 @@
         <div class="encryptor">
             <div class="input-container">
                 <label for="message">Ingrese el texto aquí</label>
-                <textarea name="message" id="message" cols="30" rows="10" placeholder="Escriba el mensaje que desea encriptar"></textarea>
-                <div class="buttoms-container">
+                <textarea name="message" id="message" cols="30" rows="10"
+                    placeholder="Escriba el mensaje que desea encriptar"></textarea>
+                <div class="buttons-container">
                     <div class="alert-message-container">
                         <img src="./icons/error_circle_warning_exclamation_alert_icon_175530.svg" alt="icono de alerta">
                         <p id="alert-message">Solo letras minúsculas y sin acentos</p>
@@ -43,6 +45,12 @@
             <button id="copy-button" class="inactive-button">Copy</button>
         </div>
     </div>
+    <footer class="footer">
+        <a href="https://www.linkedin.com/in/leonardo-salazar-serna/">
+            <img src="./icons/linkedin-icon.svg" alt="">
+        </a>
+        <p>Desarrollado por Leonardo Salazar</p>
+    </footer>
     <script src="index.js"></script>
 </body>
 
